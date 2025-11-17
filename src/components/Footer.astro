@@ -1,0 +1,129 @@
+<section class="nyhedsbrev">
+  <img class="mail_ikon" src="/public/images/nyhedsbrev_billede.svg" alt="mail" class="" />
+  <h2>Nyhedsbrev</h2>
+  <p>Tilmeld dig vores nyhedsbrev og hør alt det nye fra os først!</p>
+
+  <form>
+    <input type="email" placeholder="Email" required />
+    <button type="submit">Tilmeld</button>
+  </form>
+</section>
+
+<footer>
+  <div class="side1">
+    <img src="/public/images/googleplay.png" alt="Google Play" />
+    <img src="/public/images/appstore.png" alt="App Store" />
+  </div>
+
+  <div class="side2">
+    <ul>
+      <li><a href="#">Kontakt</a></li>
+      <li><a href="#">Om os</a></li>
+      <li><a href="#">Handels- og abonnementsbetingelser</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Persondatapolitik</a></li>
+    </ul>
+
+    <!-- putte ikoner ind under her -->
+    <div class="ikoner_footer">
+      <a href="#"></a>
+      <a href="#"></a>
+      <a href="#"></a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .nyhedsbrev {
+    background-color: #e2ddd5;
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+
+  .nyhedsbrev .mail_ikon {
+    width: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .nyhedsbrev h2 {
+    color: #3b1314;
+    margin-bottom: 0.5rem;
+  }
+
+  .nyhedsbrev p {
+    margin-bottom: 1.5rem;
+    color: #3b1314;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  input {
+    padding: 0.5rem;
+    width: 250px;
+    border: 1px solid #3b1314;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: #3b1314;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #6b4236;
+  }
+
+  footer {
+    background-color: #c5bcaa;
+    color: #3b1314;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+
+  footer .side1 img {
+    width: 140px;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  footer .side2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+
+  footer li {
+    margin-bottom: 0.3rem;
+  }
+
+  footer a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .ikoner_footer a {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+  }
+</style>

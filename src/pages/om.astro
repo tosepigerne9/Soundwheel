@@ -1,9 +1,9 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import Hero from "../components/Hero.astro";
+import Hero2 from "../components/Hero2.astro";
 import SectionInfo from "../components/SectionInfo.astro";
-import Fakta from "../components/Fakta.astro";
 import Footer from "../components/Footer.astro";
+import BigBillede from "../components/BigBillede.astro";
 ---
 
 <html lang="en">
@@ -12,17 +12,13 @@ import Footer from "../components/Footer.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Forside</title>
+    <title>Om SoundWheel</title>
   </head>
-
   <body>
     <Navigation />
-
-    <Hero bgImage="/public/images/mandpaahest.png" />
-    <br />
-    <SectionInfo h2="Mental restitution for medarbejdere" text="hejehejhej" />
-    <br />
-    <Fakta />
+    <Hero2 />
+    <SectionInfo h2="Hos SoundWheel tror vi på, at mental trivsel starter med pausen" text="Hejhejhej" />
+    <BigBillede />
     <Footer />
   </body>
 </html>

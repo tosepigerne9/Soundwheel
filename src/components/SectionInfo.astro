@@ -1,0 +1,29 @@
+---
+const { img, h2, text } = Astro.props;
+---
+
+<section class="info">
+  <div>
+    <h2>{h2}</h2>
+    <p>{text}</p>
+  </div>
+  <img src="/public/images/logo_stor.svg" alt="" />
+</section>
+
+<style>
+  .info {
+    background-color: #e2ddd5;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .info h2 {
+    margin-bottom: 1rem;
+    padding: 2rem;
+    max-width: 60%;
+  }
+  .info p {
+    max-width: 500px;
+  }
+</style>
