@@ -1,5 +1,5 @@
 <nav>
-  <div><img src="" alt="logo" /></div>
+  <div><img src="/public/images/logoSW.png" alt="logo" /></div>
   <ul>
     <a href="/">Hjem</a>
     <a href="/virksomheder">Virksomheder</a>
@@ -16,6 +16,9 @@
     justify-content: space-between;
     align-items: center;
   }
+  nav img {
+    max-width: 40%;
+  }
   ul {
     display: flex;
     gap: 1rem;
@@ -25,7 +28,9 @@
   a {
     text-decoration: none;
     font-weight: 500;
+    color: #3b1314;
   }
   a:hover {
+    text-decoration: underline;
   }
 </style>
