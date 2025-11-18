@@ -7,16 +7,22 @@ const { img, h2, text } = Astro.props;
     <h2>{h2}</h2>
     <p>{text}</p>
   </div>
-  <img src="/public/images/logo_stor.svg" alt="" />
+  <div>
+    <img src="/public/images/logo_stor.svg" alt="stort logo" />
+  </div>
 </section>
 
 <style>
   .info {
     background-color: #e2ddd5;
     padding: 4rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .info img {
+    max-width: 90%;
   }
   .info h2 {
     margin-bottom: 1rem;
