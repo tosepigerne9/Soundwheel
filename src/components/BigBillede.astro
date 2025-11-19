@@ -1,24 +1,36 @@
-<section class="baggrundsbillede">
-  <div class="h1_om_billede">
-    <h1>SoundWheel</h1>
-  </div>
+<section class="big-image">
+  <img src="/public/images/boelger.png" alt="Bølger fra SoundWheel" class="big-image__img" />
 
-  <style>
-    .baggrundsbillede {
-      background-image: url(/public/images/boelger.png);
-      background-size: cover;
-      background-position: center;
-      /* farve til tekst color: ; */
-      padding: 10rem 2rem;
-    }
-    .h1_om_billede {
-      max-width: 500px;
-      display: flex;
-      justify-content: center;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-  </style>
+  <h1 class="big-title">Sound<br />Wheel</h1>
 </section>
+
+<style>
+  .big-image {
+    position: relative;
+    width: 100%;
+    height: 550px; /* vigtig: giver sektionen højde */
+    overflow: hidden;
+  }
+
+  .big-image__img {
+    width: 100%;
+    height: 100%; /* fylder hele sektionen */
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+  }
+
+  .big-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    font-weight: 700;
+    color: #3a1f1b;
+    line-height: 0.9;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+  }
+</style>
