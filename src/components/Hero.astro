@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="h1_forside">
     <h1>Nem genopladning</h1>
-    <p>Via progressiv musik</p>
+    <p>Via <strong>progressiv</strong> musik</p>
 
     <div class="download_knapper">
       <img src="/public/images/googleplay.png" alt="Get it on Google Play" />
@@ -15,15 +15,31 @@
     background-image: url(/public/images/mandpaahest.png);
     background-size: cover;
     background-position: center;
-    /* farve til tekst color: ; */
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 16rem 2rem;
   }
   .h1_forside {
-    max-width: 500px;
+    text-align: left;
+    color: #3b1314;
+    margin-right: 30rem;
   }
-  h1 {
-    font-size: 2rem;
+  .h1_forside h1 {
+    font-size: 3rem;
     margin-bottom: 0.5rem;
+  }
+  .h1_forside p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .download_knapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .download_knapper img {
+    height: 55px;
+    cursor: pointer;
   }
 </style>

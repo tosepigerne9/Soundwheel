@@ -6,12 +6,12 @@
     </div>
 
     <div class="feature">
-      <img src="/icons/admin.svg" alt="Admin icon" />
+      <img src="/public/images/computer_ikon.png" alt="computer icon" />
       <p>Brugervenligt adminpanel. Tilføj alle medarbejdere ved tryk på én knap.</p>
     </div>
 
     <div class="feature">
-      <img src="/icons/stats.svg" alt="Stats icon" />
+      <img src="/public/images/statestikker_ikon.png" alt="Statestikker icon" />
       <p>Statistikker, der giver indsigt i, hvordan SoundWheel skaber organisationen.</p>
     </div>
   </div>
@@ -31,33 +31,40 @@
     margin: 4rem;
   }
 
-  .venstre {
+    .venstre {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
+    align-items: center;
   }
 
-  .feature {
+    .feature {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 1rem;
+    max-width: 300px;
   }
 
   .feature img {
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
   }
 
   .feature p {
     color: #3a1414;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .hoejre img {
     width: 100%;
-    max-width: 400px;
-    border-radius: 2px;
+    max-width: 450px;
+    border-radius: 3px;
+    object-fit: cover;
   }
 
   /* @media (max-width: 768px) {
