@@ -1,11 +1,15 @@
 ---
-const { img, h2, text } = Astro.props;
+const { img, h2, text, p1, p2, p3, p4 } = Astro.props;
 ---
 
 <section class="info">
   <div>
     <h2>{h2}</h2>
-    <p>{text}</p>
+    {text && <p>{text}</p>}
+    {p1 && <p>{p1}</p>}
+    {p2 && <p>{p2}</p>}
+    {p3 && <p>{p3}</p>}
+    {p4 && <p>{p4}</p>}
   </div>
   <div>
     <img src="/public/images/logo_stor.svg" alt="stort logo" />
@@ -16,6 +20,10 @@ const { img, h2, text } = Astro.props;
   .info {
     background-color: #e2ddd5;
     padding: 4rem 2rem;
+    display: flex;
+    justify-content: flex-start; /* Alt rykkes til venstre */
+    align-items: flex-start; /* Top-left alignment */
+    gap: 4rem; /* Luft mellem tekst og logo */
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
@@ -24,12 +32,14 @@ const { img, h2, text } = Astro.props;
   .info img {
     max-width: 90%;
   }
+
   .info h2 {
+    margin-top: 5rem;
     margin-bottom: 1rem;
-    padding: 2rem;
     max-width: 60%;
   }
   .info p {
     max-width: 500px;
+    margin-bottom: 1rem; /* Lille luft mellem afsnittene */
   }
 </style>
