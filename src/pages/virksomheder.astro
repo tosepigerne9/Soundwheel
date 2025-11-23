@@ -4,6 +4,21 @@ import Hero1 from "../components/Hero1.astro";
 import SectionToSidet from "../components/SectionToSidet.astro";
 import Footer from "../components/Footer.astro";
 import Anmeldelser from "../components/Anmeldelser.astro";
+import Medlemskaber from "../components/Medlemskaber.astro";
+
+const url = "https://irjvvfgufcmqkwlqsfdh.supabase.co/rest/v1/medlemskaber";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlyanZ2Zmd1ZmNtcWt3bHFzZmRoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzNTc2OTksImV4cCI6MjA3ODkzMzY5OX0.SyKVFQe-sw6ow-w2InJ1nnMl-SjBIGrEOKLqZe9G3Nc";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const supaRequest = await fetch(url, options);
+const supaData = await supaRequest.json();
+
+console.log("supaData", supaData);
 ---
 
 <html lang="en">
@@ -17,7 +32,17 @@ import Anmeldelser from "../components/Anmeldelser.astro";
   <body>
     <Navigation />
     <Hero1 />
-    <Anmeldelser/>
+    <Anmeldelser />
+    <section>
+      <h2>Medlemskaber for virksomheder</h2>
+      <div class="grid_medlemskaber">
+        {
+          supaData.map((card, i) => {
+            return <Medlemskaber text={card.navn} antal={card.antal_brugere} pris={card.pris} />;
+          })
+        }
+      </div>
+    </section>
     <SectionToSidet />
     <Footer />
   </body>
