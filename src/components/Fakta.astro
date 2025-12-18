@@ -23,12 +23,25 @@ const { img } = Astro.props;
 <style>
   .fakta_soundwheel {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
-    padding: 3rem;
-    background-color: #ffffff;
   }
+
   .fakta_soundwheel div {
-    width: 20%;
+    width: 100%;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 800px) {
+    .fakta_soundwheel {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .fakta_soundwheel div {
+      width: 20%;
+    }
   }
 </style>

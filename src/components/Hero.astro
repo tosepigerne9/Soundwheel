@@ -12,34 +12,54 @@
 
 <style>
   .hero {
-    background-image: url(/public/images/mandpaahest.png);
+    background-image: url(/images/mandpaahest.png);
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16rem 2rem;
+    padding: 6rem 1.5rem;
+    text-align: center;
   }
+
   .h1_forside {
-    text-align: left;
+    margin-bottom: 7.5rem;
     color: #3b1314;
-    margin-right: 30rem;
   }
   .h1_forside h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
   }
+
   .h1_forside p {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
   }
+
   .download_knapper {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
   }
-  .download_knapper img {
-    height: 55px;
-    cursor: pointer;
+
+  @media (min-width: 800px) {
+    .hero {
+      padding: 16rem 2rem;
+      text-align: left;
+    }
+
+    .h1_forside {
+      text-align: left;
+
+      margin-right: 30rem;
+    }
+    .h1_forside p {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .download_knapper {
+      flex-direction: row;
+    }
+    .download_knapper img {
+      height: 55px;
+      cursor: pointer;
+    }
   }
 </style>

@@ -25,6 +25,7 @@ console.log("supaData", supaData);
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="styles/style.css" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>For virksomheder</title>
@@ -37,12 +38,34 @@ console.log("supaData", supaData);
       <h2>Medlemskaber for virksomheder</h2>
       <div class="grid_medlemskaber">
         {
-          supaData.map((card, i) => {
-            return <Medlemskaber text={card.navn} antal={card.antal_brugere} pris={card.pris} />;
-          })
+          supaData.map((card) => (
+            <a class="card-link" href={`/medlemskab/${card.id}`}>
+              <Medlemskaber text={card.navn} antal={card.antal_brugere} pris={card.pris} />
+            </a>
+          ))
         }
       </div>
     </section>
+    <style>
+      .grid_medlemskaber {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+      }
+
+      @media (min-width: 800px) {
+        .grid_medlemskaber {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .card-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
     <SectionToSidet />
     <Footer />
   </body>

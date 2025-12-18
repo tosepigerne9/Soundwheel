@@ -8,16 +8,36 @@
       background-image: url(/images/kvinde.png);
       background-size: cover;
       background-position: center;
-      /* farve til tekst color: ; */
-      text-align: right;
-      padding: 16rem 2rem;
+      text-align: center;
+      padding: 6rem 1.5rem;
     }
+
     .h1_om {
-      max-width: 500px;
+      max-width: 100%;
+      margin: 0 auto;
     }
+
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      margin-top: 12rem;
+      font-size: 3rem;
+      color: #ffffff;
+    }
+
+    /* DESKTOP */
+    @media (min-width: 768px) {
+      .hero {
+        padding: 16rem 5rem;
+      }
+
+      .h1_om {
+        max-width: 500px;
+        margin-left: auto;
+      }
+
+      h1 {
+        margin-top: 1rem;
+        font-size: 5rem;
+      }
     }
   </style>
 </section>

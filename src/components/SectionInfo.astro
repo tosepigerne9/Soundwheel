@@ -19,18 +19,15 @@ const { img, h2, text, p1, p2, p3, p4 } = Astro.props;
 <style>
   .info {
     background-color: #e2ddd5;
-    padding: 4rem 2rem;
+    padding: 3rem 1.5rem;
     display: flex;
-    justify-content: flex-start; /* Alt rykkes til venstre */
-    align-items: flex-start; /* Top-left alignment */
-    gap: 4rem; /* Luft mellem tekst og logo */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    color: #3b1314;
   }
 
   .info img {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .info h2 {
@@ -41,5 +38,19 @@ const { img, h2, text, p1, p2, p3, p4 } = Astro.props;
   .info p {
     max-width: 500px;
     margin-bottom: 1rem; /* Lille luft mellem afsnittene */
+  }
+
+  /* DESKTOP */
+  @media (min-width: 800px) {
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 4rem 2rem;
+      padding-left: 6rem;
+    }
+
+    .info h2 {
+      max-width: 60%;
+    }
   }
 </style>
