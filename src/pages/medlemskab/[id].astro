@@ -1,0 +1,28 @@
+---
+export async function getStaticPaths() {
+  const url = "https://irjvvfgufcmqkwlqsfdh.supabase.co/rest/v1/medlemskaber";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlyanZ2Zmd1ZmNtcWt3bHFzZmRoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzNTc2OTksImV4cCI6MjA3ODkzMzY5OX0.SyKVFQe-sw6ow-w2InJ1nnMl-SjBIGrEOKLqZe9G3Nc";
+
+  const res = await fetch(url, {
+    headers: {
+      apikey: key,
+    },
+  });
+
+  const data = await res.json();
+
+  return data.map((medlemskab) => {
+    return {
+      params: { id: medlemskab.id.toString() },
+      props: { medlemskab },
+    };
+  });
+}
+
+const { id } = Astro.params;
+const { medlemskab } = Astro.props;
+---
+
+<h1>{medlemskab.navn}</h1>
+<p>Op til {medlemskab.antal_brugere} brugere</p>
+<p>{medlemskab.pris} kr/år – ekskl. moms</p>

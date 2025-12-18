@@ -8,13 +8,13 @@
   .big-image {
     position: relative;
     width: 100%;
-    height: 550px; /* vigtig: giver sektionen højde */
+    height: 300px;
     overflow: hidden;
   }
 
   .big-image__img {
     width: 100%;
-    height: 100%; /* fylder hele sektionen */
+    height: 100%;
     object-fit: cover;
     object-position: center 25%;
     display: block;
@@ -22,15 +22,28 @@
 
   .big-title {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 6.5rem;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3rem;
     font-weight: 700;
     color: #3a1f1b;
-    line-height: 0.9;
+    line-height: 1;
     text-align: center;
     margin: 0;
-    white-space: nowrap;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 768px) {
+    .big-image {
+      height: 550px;
+    }
+
+    .big-title {
+      font-size: 6.5rem;
+      white-space: nowrap;
+    }
   }
 </style>
